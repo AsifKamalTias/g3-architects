@@ -230,6 +230,11 @@ nav ul li a{
     border-radius: 8px;
     padding: 50px 35px;
     text-align: center;
+    transition: transform 2s;
+}
+
+.fact:hover{
+    transform: rotate(90deg);
 }
 
 .fact img{
@@ -289,5 +294,85 @@ footer p{
     margin-left: 30px;
     margin-right: 30px;
 }
+
+@media only screen and (max-width: 600px) {
+    nav{
+        flex-direction: column;
+    }
+
+    .header-container-texts p{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    .header-container img{
+        width: 70%;
+    }
+
+    .quick-list{
+        flex-direction: column-reverse;
+    }
+
+    .quick-list-img{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .quick-list-text{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .features{
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .feature-text{
+        margin-left: 30px;
+    }
+
+    .feture-pic img{
+        width: 70%;
+    }
+
+    .feature-pic{
+        position: static;
+        text-align: center;
+    }
+
+    .feature-img{
+        position: static;
+    }
+
+    .feature-img-text{
+        position: static;
+    }
+    
+    .large-text{
+        font-size: 40px;
+    }
+
+    .facts > p, .facts > h2{
+        text-align: justify;
+        width: auto;
+    }
+
+    .some-facts{
+        flex-direction: column;
+    }
+
+    .sponsor-text p, .sponsor-text h2{
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .sponsor-img{
+        flex-direction: column;
+    }
+}
+
+
 
 
