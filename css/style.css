@@ -56,7 +56,7 @@ nav ul li a{
     color: var(--dark-3);
 }
 
-.header-container button, .quick-list-text button{
+.header-container button, .quick-list-text button, .news-letter-submit{
     background-color: var(--primary-color);
     color: #ffff;
     border: none;
@@ -192,6 +192,10 @@ nav ul li a{
     font-weight: 700;
     font-size: 65px;
 }
+
+.small-text{
+    font-size: 25px;
+}
 /* .feature-img img{
     position: absolute;
     top: 0;
@@ -205,7 +209,7 @@ nav ul li a{
     margin-right: 30px;
 }
 
-.facts h2{
+.facts h2, .news-letter h2{
     font-weight: 700;
     font-size: 45px;
 
@@ -231,6 +235,7 @@ nav ul li a{
     padding: 50px 35px;
     text-align: center;
     transition: transform 2s;
+    width: 190px;
 }
 
 .fact:hover{
@@ -250,6 +255,36 @@ nav ul li a{
     font-size: 20px;
     color: var(--dark-3);
     margin: 0;
+}
+
+/* news-letter */
+.news-letter{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: rgba(255, 144, 14, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.news-letter-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.news-letter-email{
+   height: 45px;
+   border: 1px solid var(--primary-color);
+   border-radius: 8px;
+   width: 300px;
+   font-size: 18px;
+   padding: 10px;
+}
+
+.news-letter-email:focus{
+    border: 3px solid var(--primary-color);
+    outline: none;
 }
 
 /* sponsor */
@@ -295,8 +330,14 @@ footer p{
     margin-right: 30px;
 }
 
+/* responsive */
+
 @media only screen and (max-width: 600px) {
     nav{
+        flex-direction: column;
+    }
+
+    nav ul{
         flex-direction: column;
     }
 
@@ -310,7 +351,7 @@ footer p{
     }
 
     .quick-list{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .quick-list-img{
@@ -342,15 +383,17 @@ footer p{
     }
 
     .feature-img{
-        position: static;
+        position: relative;
     }
 
     .feature-img-text{
-        position: static;
+        position: absolute;
+        bottom: -25px;
+        left: 130px;
     }
-    
+
     .large-text{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .facts > p, .facts > h2{
